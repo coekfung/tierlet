@@ -40,7 +40,7 @@
 ## Git and Collaboration
 
 - Do not commit unless the user explicitly asks for a commit.
-- Use Conventional Commits for commit messages (e.g. `feat:`, `fix:`, `chore:`, `build:`).
+- Use Conventional Commits for commit messages with explicit submoudles (e.g. `feat(core):`, `fix(daemon):`, `chore:`, `refactor:`).
 - Stage explicit file paths only, and inspect `git status` before committing.
 - Preserve unrelated changes made by the user or other sessions. Do not use destructive commands such as `git reset --hard`, `git clean`, or broad staging commands.
 - If a merge or rebase conflict affects a file not modified in the current task, stop and ask for direction.
