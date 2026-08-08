@@ -6,7 +6,7 @@ BUILD_DIR ?= $(BUILT_PRODUCTS_DIR)
 RUST_PROFILE := $(if $(filter Release,$(CONFIGURATION)),release,debug)
 CARGO_FLAGS := $(if $(filter Release,$(CONFIGURATION)),--release,)
 OUTPUT_LIBRARY := $(BUILT_PRODUCTS_DIR)/libtierlet_core.a
-GENERATED_DIR := $(BUILD_DIR)/Generated/TierletCore
+GENERATED_DIR := $(CURDIR)/Generated
 FIRST_RUST_TARGET := $(if $(filter arm64,$(firstword $(ARCHS))),aarch64-apple-darwin,x86_64-apple-darwin)
 BINDGEN_LIBRARY := $(CURDIR)/target/$(FIRST_RUST_TARGET)/$(RUST_PROFILE)/libtierlet_core.a
 

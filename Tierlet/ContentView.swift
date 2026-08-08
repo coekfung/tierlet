@@ -18,9 +18,18 @@ struct ContentView: View {
             Text(daemon.status)
                 .foregroundStyle(.secondary)
 
+            if let daemonStatus = daemon.daemonStatus {
+                Text("EasyTier \(daemonStatus.easyTierVersion) — \(daemonStatus.coreReady ? "core ready" : "core not ready")")
+                    .foregroundStyle(.secondary)
+            }
+
             HStack {
                 Button("Install Helper") {
                     daemon.install()
+                }
+
+                Button("Uninstall Helper") {
+                    daemon.uninstall()
                 }
 
                 Button("Ping Helper") {

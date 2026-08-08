@@ -1,5 +1,7 @@
 uniffi::setup_scaffolding!();
 
+mod runtime;
+
 /// Version of the API shared with the macOS daemon host.
 #[uniffi::export]
 pub fn tierlet_core_abi_version() -> u32 {

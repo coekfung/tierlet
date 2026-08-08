@@ -10,6 +10,13 @@ crate-type = ["staticlib"]
 bindgen = ["uniffi/cli"]
 
 [dependencies]
+# EasyTier is not on crates.io; pin to the v2.6.4 release tag (not `main`).
+easytier = { git = "https://github.com/EasyTier/EasyTier.git", tag = "v2.6.4", version = "2.6.4" }
+# Tokio stays inside TierletCore; only simple types cross the UniFFI boundary.
+tokio = { version = "1", features = ["rt-multi-thread", "net", "time"] }
+# Error handling: anyhow for internal fallible work, thiserror for the FFI boundary.
+anyhow = "1"
+thiserror = "2"
 uniffi = "0.32.0"
 
 [[bin]]
