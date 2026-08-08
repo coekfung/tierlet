@@ -1,20 +1,6 @@
 import Foundation
 import Darwin
 
-final class DaemonService: NSObject, TierletDaemonProtocol {
-    func ping(withReply reply: @escaping (String) -> Void) {
-        reply("tierletd is running (core ABI \(tierletCoreAbiVersion()))")
-    }
-
-    func status(withReply reply: @escaping (TierletDaemonStatus) -> Void) {
-        let status = runtimeStatus()
-        reply(TierletDaemonStatus(
-            coreReady: status.initialized,
-            easyTierVersion: status.easyTierVersion
-        ))
-    }
-}
-
 final class DaemonListenerDelegate: NSObject, NSXPCListenerDelegate {
     private let service = DaemonService()
 
@@ -22,7 +8,7 @@ final class DaemonListenerDelegate: NSObject, NSXPCListenerDelegate {
         _ listener: NSXPCListener,
         shouldAcceptNewConnection connection: NSXPCConnection
     ) -> Bool {
-        connection.exportedInterface = NSXPCInterface(with: TierletDaemonProtocol.self)
+        connection.exportedInterface = NSXPCInterface(with: TierletServiceProtocol.self)
         connection.exportedObject = service
         connection.resume()
         return true
@@ -57,11 +43,11 @@ sigintSource.resume()
 signal(SIGINT, SIG_IGN)
 
 let delegate = DaemonListenerDelegate()
-let listener = NSXPCListener(machServiceName: TierletService.machServiceName)
+let listener = NSXPCListener(machServiceName: TierletServiceIdentity.machServiceName)
 
 do {
     listener.setConnectionCodeSigningRequirement(
-        try TierletCodeSigning.sameTeamRequirement(for: TierletService.appIdentifier)
+        try TierletCodeSigning.sameTeamRequirement(for: TierletServiceIdentity.appIdentifier)
     )
     listener.delegate = delegate
     listener.resume()

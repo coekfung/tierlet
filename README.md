@@ -22,6 +22,10 @@ Tierlet consists of three main components:
 
 The app communicates with the privileged service through a code-signing-validated XPC interface. The EasyTier core does not expose an additional local management port.
 
+Service code is grouped under `TierletService/`: `Contract/` contains the XPC
+contract shared by the app and daemon, while `Core/` contains the Rust engine
+and its daemon-only UniFFI bridge.
+
 Tierlet targets macOS 13 or later and supports both Apple Silicon and Intel Macs.
 
 ## Network Management
@@ -79,6 +83,6 @@ Commands:
 - `make build-universal` — universal (arm64 + x86_64) Release build
 - `make ci` — everything CI runs
 
-Xcode invokes `TierletCore/Makefile` before compiling `tierletd`. The UniFFI
-Swift bindings are regenerated at `TierletCore/Generated/`; do not edit them
-directly.
+Xcode invokes `TierletService/Core/Makefile` before compiling `tierletd`. The
+UniFFI Swift bindings are regenerated at `TierletService/Core/Generated/`; do
+not edit them directly.

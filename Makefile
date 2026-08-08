@@ -1,7 +1,7 @@
 PROJECT := Tierlet.xcodeproj
 SCHEME := Tierlet
 DERIVED_DATA := $(CURDIR)/.build/DerivedData
-RUST_MANIFEST := TierletCore/Cargo.toml
+RUST_MANIFEST := TierletService/Core/Cargo.toml
 
 .PHONY: bootstrap check test build build-universal ci
 

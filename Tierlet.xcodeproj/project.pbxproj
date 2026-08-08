@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A10000013026F0000025A401 /* TierletDaemonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000103026F0000025A401 /* TierletDaemonProtocol.swift */; };
-		A10000023026F0000025A401 /* TierletDaemonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000103026F0000025A401 /* TierletDaemonProtocol.swift */; };
+		A10000013026F0000025A401 /* TierletServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000103026F0000025A401 /* TierletServiceProtocol.swift */; };
+		A10000023026F0000025A401 /* TierletServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000103026F0000025A401 /* TierletServiceProtocol.swift */; };
 		A10000033026F0000025A401 /* tierletd in Embed Helper */ = {isa = PBXBuildFile; fileRef = 8563D7053026EA1D0025A401 /* tierletd */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A10000043026F0000025A401 /* wang.coekfung.tierlet.daemon.plist in LaunchDaemons */ = {isa = PBXBuildFile; fileRef = A10000113026F0000025A401 /* wang.coekfung.tierlet.daemon.plist */; };
+		A10000053026F0000025A401 /* TierletServiceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000123026F0000025A401 /* TierletServiceIdentity.swift */; };
+		A10000063026F0000025A401 /* TierletServiceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000123026F0000025A401 /* TierletServiceIdentity.swift */; };
+		A10000073026F0000025A401 /* TierletServiceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000133026F0000025A401 /* TierletServiceModels.swift */; };
+		A10000083026F0000025A401 /* TierletServiceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000133026F0000025A401 /* TierletServiceModels.swift */; };
+		A10000093026F0000025A401 /* TierletCodeSigning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000143026F0000025A401 /* TierletCodeSigning.swift */; };
+		A100000A3026F0000025A401 /* TierletCodeSigning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000143026F0000025A401 /* TierletCodeSigning.swift */; };
 		B20000213026F1000025A401 /* libtierlet_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B20000203026F1000025A401 /* libtierlet_core.a */; };
-		B20000413026F2000025A401 /* TierletCore/Generated/TierletCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000403026F2000025A401 /* TierletCore/Generated/TierletCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +62,23 @@
 /* Begin PBXFileReference section */
 		8563D6F33026E9DB0025A401 /* Tierlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tierlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8563D7053026EA1D0025A401 /* tierletd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tierletd; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10000103026F0000025A401 /* TierletDaemonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierletDaemonProtocol.swift; sourceTree = "<group>"; };
+		A10000103026F0000025A401 /* TierletServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierletServiceProtocol.swift; sourceTree = "<group>"; };
 		A10000113026F0000025A401 /* wang.coekfung.tierlet.daemon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = wang.coekfung.tierlet.daemon.plist; sourceTree = "<group>"; };
+		A10000123026F0000025A401 /* TierletServiceIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierletServiceIdentity.swift; sourceTree = "<group>"; };
+		A10000133026F0000025A401 /* TierletServiceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierletServiceModels.swift; sourceTree = "<group>"; };
+		A10000143026F0000025A401 /* TierletCodeSigning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierletCodeSigning.swift; sourceTree = "<group>"; };
 		B20000203026F1000025A401 /* libtierlet_core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtierlet_core.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B20000403026F2000025A401 /* TierletCore/Generated/TierletCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierletCore/Generated/TierletCore.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		855FC72630272FE4003B9642 /* Exceptions for "Core" folder in "tierletd" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Generated/TierletCore.swift,
+			);
+			target = 8563D7043026EA1D0025A401 /* tierletd */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8563D6F53026E9DB0025A401 /* Tierlet */ = {
@@ -74,9 +91,12 @@
 			path = TierletDaemon;
 			sourceTree = "<group>";
 		};
-		B20000303026F1000025A401 /* TierletCore */ = {
+		B20000303026F1000025A401 /* Core */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TierletCore;
+			exceptions = (
+				855FC72630272FE4003B9642 /* Exceptions for "Core" folder in "tierletd" target */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -101,9 +121,7 @@
 			children = (
 				8563D6F53026E9DB0025A401 /* Tierlet */,
 				8563D7063026EA1D0025A401 /* TierletDaemon */,
-				B20000303026F1000025A401 /* TierletCore */,
-				B20000403026F2000025A401 /* TierletCore/Generated/TierletCore.swift */,
-				A10000403026F0000025A401 /* TierletIPC */,
+				A10000403026F0000025A401 /* TierletService */,
 				A10000413026F0000025A401 /* Resources */,
 				8563D6F43026E9DB0025A401 /* Products */,
 				8563D71430271EA10025A401 /* Recovered References */,
@@ -127,12 +145,13 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		A10000403026F0000025A401 /* TierletIPC */ = {
+		A10000403026F0000025A401 /* TierletService */ = {
 			isa = PBXGroup;
 			children = (
-				A10000103026F0000025A401 /* TierletDaemonProtocol.swift */,
+				A10000433026F0000025A401 /* Contract */,
+				B20000303026F1000025A401 /* Core */,
 			);
-			path = TierletIPC;
+			path = TierletService;
 			sourceTree = "<group>";
 		};
 		A10000413026F0000025A401 /* Resources */ = {
@@ -149,6 +168,17 @@
 				A10000113026F0000025A401 /* wang.coekfung.tierlet.daemon.plist */,
 			);
 			path = LaunchDaemons;
+			sourceTree = "<group>";
+		};
+		A10000433026F0000025A401 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				A10000123026F0000025A401 /* TierletServiceIdentity.swift */,
+				A10000103026F0000025A401 /* TierletServiceProtocol.swift */,
+				A10000133026F0000025A401 /* TierletServiceModels.swift */,
+				A10000143026F0000025A401 /* TierletCodeSigning.swift */,
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,13 +279,13 @@
 			name = "Build Rust Core";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/libtierlet_core.a",
-				"$(SRCROOT)/TierletCore/Generated/TierletCore.swift",
-				"$(SRCROOT)/TierletCore/Generated/module.h",
-				"$(SRCROOT)/TierletCore/Generated/module.modulemap",
+				"$(SRCROOT)/TierletService/Core/Generated/TierletCore.swift",
+				"$(SRCROOT)/TierletService/Core/Generated/module.h",
+				"$(SRCROOT)/TierletService/Core/Generated/module.modulemap",
 			);
 			shellPath = /bin/sh;
 			shellScript = (
-				"/usr/bin/make -C \"$SRCROOT/TierletCore\" xcode",
+				"/usr/bin/make -C \"$SRCROOT/TierletService/Core\" xcode",
 				"",
 			);
 		};
@@ -265,14 +295,19 @@
 		8563D6EF3026E9DB0025A401 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				A10000013026F0000025A401 /* TierletDaemonProtocol.swift in Sources */,
+				A10000053026F0000025A401 /* TierletServiceIdentity.swift in Sources */,
+				A10000013026F0000025A401 /* TierletServiceProtocol.swift in Sources */,
+				A10000073026F0000025A401 /* TierletServiceModels.swift in Sources */,
+				A10000093026F0000025A401 /* TierletCodeSigning.swift in Sources */,
 			);
 		};
 		8563D7013026EA1D0025A401 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				A10000023026F0000025A401 /* TierletDaemonProtocol.swift in Sources */,
-				B20000413026F2000025A401 /* TierletCore/Generated/TierletCore.swift in Sources */,
+				A10000063026F0000025A401 /* TierletServiceIdentity.swift in Sources */,
+				A10000023026F0000025A401 /* TierletServiceProtocol.swift in Sources */,
+				A10000083026F0000025A401 /* TierletServiceModels.swift in Sources */,
+				A100000A3026F0000025A401 /* TierletCodeSigning.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
@@ -483,7 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wang.coekfung.tierlet.daemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/TierletCore/Generated";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/TierletService/Core/Generated";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -506,7 +541,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wang.coekfung.tierlet.daemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/TierletCore/Generated";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/TierletService/Core/Generated";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};

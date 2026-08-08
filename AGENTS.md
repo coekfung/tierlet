@@ -4,8 +4,8 @@
 
 - `Tierlet/`: SwiftUI macOS application.
 - `TierletDaemon/`: Swift host for the privileged `tierletd` service.
-- `TierletCore/`: Rust static library that integrates with EasyTier.
-- `TierletIPC/`: XPC contracts shared by the app and daemon.
+- `TierletService/Contract/`: XPC contracts shared by the app and daemon.
+- `TierletService/Core/`: Rust static library and daemon-only UniFFI bridge that integrate with EasyTier.
 - `Resources/`: Embedded macOS service resources.
 - `Tierlet.xcodeproj/`: Xcode project for the app and daemon targets.
 
@@ -40,6 +40,7 @@
 ## Git and Collaboration
 
 - Do not commit unless the user explicitly asks for a commit.
+- Use Conventional Commits for commit messages (e.g. `feat:`, `fix:`, `chore:`, `build:`).
 - Stage explicit file paths only, and inspect `git status` before committing.
 - Preserve unrelated changes made by the user or other sessions. Do not use destructive commands such as `git reset --hard`, `git clean`, or broad staging commands.
 - If a merge or rebase conflict affects a file not modified in the current task, stop and ask for direction.

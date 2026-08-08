@@ -8,39 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var daemon = DaemonClient()
+    @StateObject private var service = TierletServiceClient()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Tierlet")
                 .font(.largeTitle)
 
-            Text(daemon.status)
+            Text(service.status)
                 .foregroundStyle(.secondary)
 
-            if let daemonStatus = daemon.daemonStatus {
-                Text("EasyTier \(daemonStatus.easyTierVersion) — \(daemonStatus.coreReady ? "core ready" : "core not ready")")
+            if let serviceStatus = service.serviceStatus {
+                Text("EasyTier \(serviceStatus.easyTierVersion) — \(serviceStatus.coreReady ? "core ready" : "core not ready")")
                     .foregroundStyle(.secondary)
             }
 
             HStack {
                 Button("Install Helper") {
-                    daemon.install()
+                    service.install()
                 }
 
                 Button("Uninstall Helper") {
-                    daemon.uninstall()
+                    service.uninstall()
                 }
 
                 Button("Ping Helper") {
-                    daemon.ping()
+                    service.ping()
                 }
             }
         }
         .frame(minWidth: 420, minHeight: 220, alignment: .topLeading)
         .padding(24)
         .task {
-            daemon.refreshStatus()
+            service.refreshStatus()
         }
     }
 }
