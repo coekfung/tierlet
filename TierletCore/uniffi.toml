@@ -1,0 +1,4 @@
+[bindings.swift]
+module_name = "TierletCore"
+ffi_module_name = "TierletCoreFFI"
+ffi_module_filename = "module"

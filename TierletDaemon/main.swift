@@ -3,7 +3,7 @@ import Darwin
 
 final class DaemonService: NSObject, TierletDaemonProtocol {
     func ping(withReply reply: @escaping (String) -> Void) {
-        reply("tierletd is running")
+        reply("tierletd is running (core ABI \(tierletCoreAbiVersion()))")
     }
 }
 
