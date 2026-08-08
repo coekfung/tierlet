@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000013026F0000025A401 /* TierletDaemonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000103026F0000025A401 /* TierletDaemonProtocol.swift */; };
+		A10000023026F0000025A401 /* TierletDaemonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000103026F0000025A401 /* TierletDaemonProtocol.swift */; };
+		A10000033026F0000025A401 /* tierletd in Embed Helper */ = {isa = PBXBuildFile; fileRef = 8563D7053026EA1D0025A401 /* tierletd */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A10000043026F0000025A401 /* wang.coekfung.tierlet.daemon.plist in LaunchDaemons */ = {isa = PBXBuildFile; fileRef = A10000113026F0000025A401 /* wang.coekfung.tierlet.daemon.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A10000203026F0000025A401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8563D6EB3026E9DB0025A401 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8563D7043026EA1D0025A401;
+			remoteInfo = tierletd;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A10000303026F0000025A401 /* Embed Helper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				A10000033026F0000025A401 /* tierletd in Embed Helper */,
+			);
+			name = "Embed Helper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10000313026F0000025A401 /* LaunchDaemons */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = Contents/Library/LaunchDaemons;
+			dstSubfolderSpec = 1;
+			files = (
+				A10000043026F0000025A401 /* wang.coekfung.tierlet.daemon.plist in LaunchDaemons */,
+			);
+			name = LaunchDaemons;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8563D7033026EA1D0025A401 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolder = None;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A10000103026F0000025A401 /* TierletDaemonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TierletDaemonProtocol.swift; sourceTree = "<group>"; };
+		A10000113026F0000025A401 /* wang.coekfung.tierlet.daemon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = wang.coekfung.tierlet.daemon.plist; sourceTree = "<group>"; };
+		8563D6F33026E9DB0025A401 /* Tierlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tierlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8563D7053026EA1D0025A401 /* tierletd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tierletd; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8563D6F53026E9DB0025A401 /* Tierlet */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Tierlet;
+			sourceTree = "<group>";
+		};
+		8563D7063026EA1D0025A401 /* TierletDaemon */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TierletDaemon;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8563D6F03026E9DB0025A401 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		8563D7023026EA1D0025A401 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8563D6EA3026E9DB0025A401 = {
+			isa = PBXGroup;
+			children = (
+				8563D6F53026E9DB0025A401 /* Tierlet */,
+				8563D7063026EA1D0025A401 /* TierletDaemon */,
+				A10000403026F0000025A401 /* TierletIPC */,
+				A10000413026F0000025A401 /* Resources */,
+				8563D6F43026E9DB0025A401 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8563D6F43026E9DB0025A401 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8563D6F33026E9DB0025A401 /* Tierlet.app */,
+				8563D7053026EA1D0025A401 /* tierletd */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10000403026F0000025A401 /* TierletIPC */ = {
+			isa = PBXGroup;
+			children = (
+				A10000103026F0000025A401 /* TierletDaemonProtocol.swift */,
+			);
+			path = TierletIPC;
+			sourceTree = "<group>";
+		};
+		A10000413026F0000025A401 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A10000423026F0000025A401 /* LaunchDaemons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A10000423026F0000025A401 /* LaunchDaemons */ = {
+			isa = PBXGroup;
+			children = (
+				A10000113026F0000025A401 /* wang.coekfung.tierlet.daemon.plist */,
+			);
+			path = LaunchDaemons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8563D6F23026E9DB0025A401 /* Tierlet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8563D6FE3026E9DC0025A401 /* Build configuration list for PBXNativeTarget "Tierlet" */;
+			buildPhases = (
+				8563D6EF3026E9DB0025A401 /* Sources */,
+				8563D6F03026E9DB0025A401 /* Frameworks */,
+				8563D6F13026E9DB0025A401 /* Resources */,
+				A10000303026F0000025A401 /* Embed Helper */,
+				A10000313026F0000025A401 /* LaunchDaemons */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				8563D6F53026E9DB0025A401 /* Tierlet */,
+			);
+			name = Tierlet;
+			dependencies = (
+				A10000213026F0000025A401 /* PBXTargetDependency */,
+			);
+			productName = Tierlet;
+			productReference = 8563D6F33026E9DB0025A401 /* Tierlet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8563D7043026EA1D0025A401 /* tierletd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8563D7093026EA1D0025A401 /* Build configuration list for PBXNativeTarget "tierletd" */;
+			buildPhases = (
+				8563D7013026EA1D0025A401 /* Sources */,
+				8563D7023026EA1D0025A401 /* Frameworks */,
+				8563D7033026EA1D0025A401 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				8563D7063026EA1D0025A401 /* TierletDaemon */,
+			);
+			name = tierletd;
+			productName = tierletd;
+			productReference = 8563D7053026EA1D0025A401 /* tierletd */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8563D6EB3026E9DB0025A401 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					8563D6F23026E9DB0025A401 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					8563D7043026EA1D0025A401 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 8563D6EE3026E9DB0025A401 /* Build configuration list for PBXProject "Tierlet" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8563D6EA3026E9DB0025A401;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8563D6F43026E9DB0025A401 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8563D6F23026E9DB0025A401 /* Tierlet */,
+				8563D7043026EA1D0025A401 /* tierletd */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8563D6F13026E9DB0025A401 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8563D6EF3026E9DB0025A401 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				A10000013026F0000025A401 /* TierletDaemonProtocol.swift in Sources */,
+			);
+		};
+		8563D7013026EA1D0025A401 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				A10000023026F0000025A401 /* TierletDaemonProtocol.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A10000213026F0000025A401 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8563D7043026EA1D0025A401 /* tierletd */;
+			targetProxy = A10000203026F0000025A401 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8563D6FC3026E9DC0025A401 /* Debug configuration for PBXProject "Tierlet" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8563D6FD3026E9DC0025A401 /* Release configuration for PBXProject "Tierlet" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		8563D6FF3026E9DC0025A401 /* Debug configuration for PBXNativeTarget "Tierlet" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wang.coekfung.tierlet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8563D7003026E9DC0025A401 /* Release configuration for PBXNativeTarget "Tierlet" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wang.coekfung.tierlet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8563D70A3026EA1D0025A401 /* Debug configuration for PBXNativeTarget "tierletd" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wang.coekfung.tierlet.daemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8563D70B3026EA1D0025A401 /* Release configuration for PBXNativeTarget "tierletd" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wang.coekfung.tierlet.daemon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8563D6EE3026E9DB0025A401 /* Build configuration list for PBXProject "Tierlet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8563D6FC3026E9DC0025A401 /* Debug configuration for PBXProject "Tierlet" */,
+				8563D6FD3026E9DC0025A401 /* Release configuration for PBXProject "Tierlet" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		8563D6FE3026E9DC0025A401 /* Build configuration list for PBXNativeTarget "Tierlet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8563D6FF3026E9DC0025A401 /* Debug configuration for PBXNativeTarget "Tierlet" */,
+				8563D7003026E9DC0025A401 /* Release configuration for PBXNativeTarget "Tierlet" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		8563D7093026EA1D0025A401 /* Build configuration list for PBXNativeTarget "tierletd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8563D70A3026EA1D0025A401 /* Debug configuration for PBXNativeTarget "tierletd" */,
+				8563D70B3026EA1D0025A401 /* Release configuration for PBXNativeTarget "tierletd" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8563D6EB3026E9DB0025A401 /* Project object */;
+	validationLevel = 1;
+}
