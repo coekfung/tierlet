@@ -6,6 +6,7 @@ plan.md
 DerivedData/
 *.xcuserstate
 xcuserdata/
+com.apple.DeveloperTools/
 
 # Rust
 target/
