@@ -115,7 +115,7 @@ final class TierletServiceClient: ObservableObject {
         return connection
     }
 
-    deinit {
+    isolated deinit {
         connection?.invalidate()
     }
 }
