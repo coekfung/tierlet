@@ -2,7 +2,7 @@ import Foundation
 
 /// Snapshot of the privileged service state transported across XPC.
 @objc(TierletServiceStatus)
-final class TierletServiceStatus: NSObject, NSSecureCoding {
+nonisolated final class TierletServiceStatus: NSObject, NSSecureCoding {
     static var supportsSecureCoding: Bool { true }
 
     let coreReady: Bool
