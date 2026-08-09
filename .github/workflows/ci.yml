@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  checks:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,5 +18,22 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: clippy, rustfmt
-          targets: aarch64-apple-darwin, x86_64-apple-darwin
-      - run: make ci
+      - run: make check test
+
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: arm64
+            rust-target: aarch64-apple-darwin
+          - arch: x86_64
+            rust-target: x86_64-apple-darwin
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install protobuf
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust-target }}
+      - run: make build CONFIGURATION=Release ARCH=${{ matrix.arch }}

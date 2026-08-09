@@ -56,13 +56,6 @@ validates the app's signing identifier and Team ID. `tierletd` is a command-line
 tool, so its identifier is explicitly set to
 `wang.coekfung.tierlet.daemon` while signing; do not remove that build setting.
 
-After producing a Developer ID-signed and notarized build, verify both
-acceptance and rejection paths before installing it:
-
-```sh
-Scripts/verify-xpc-signing.sh /path/to/Tierlet.app
-```
-
 When either the helper executable or its plist changes, use **Uninstall Helper**
 and then **Install Helper** from the app. Approve the new helper in System
 Settings if macOS requests it.
@@ -73,16 +66,16 @@ Requirements:
 
 - macOS 13+ with Xcode
 - An Apple Developer Program team with a valid Developer ID Application certificate to test the privileged LaunchDaemon; the app bundle must be notarized before `SMAppService` can install it
-- Rust stable toolchain with the `aarch64-apple-darwin` and `x86_64-apple-darwin` targets (`make bootstrap` adds them via rustup)
+- Rust stable toolchain with the target for the current Mac (`make bootstrap` adds it via rustup)
 - `protoc`, the protobuf compiler, on `PATH` (`brew install protobuf`), required by EasyTier's build
 
 Commands:
 
 - `make check` — Rust formatting, clippy, and plist linting
-- `make test` — Rust unit tests and a Debug build
-- `make build-universal` — universal (arm64 + x86_64) Release build
-- `make ci` — everything CI runs
+- `make test` — Rust unit tests
+- `make build` — Debug build for the current Mac architecture
 
-Xcode invokes `TierletService/Core/Makefile` before compiling `tierletd`. The
-UniFFI Swift bindings are regenerated at `TierletService/Core/Generated/`; do
-not edit them directly.
+Xcode invokes `Scripts/build-rust-core.sh` before compiling `tierletd`. Each
+build targets exactly one architecture; CI builds `arm64` and `x86_64`
+separately. The UniFFI Swift bindings are regenerated at
+`TierletService/Core/Generated/`; do not edit them directly.

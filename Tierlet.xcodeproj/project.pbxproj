@@ -285,7 +285,7 @@
 			);
 			shellPath = /bin/sh;
 			shellScript = (
-				"/usr/bin/make -C \"$SRCROOT/TierletService/Core\" xcode",
+				"\"$SRCROOT/Scripts/build-rust-core.sh\"",
 				"",
 			);
 		};
